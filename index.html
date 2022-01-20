@@ -4,129 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+          $("#header").load("header.html"); 
+          $("#footer").load("footer.html"); 
+        });
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Project Name</title>
+    <link rel="icon" type="image/x-icon" href="/Assets/favico3.PNG">
+    <title>Nilo Cinemas Gestão</title>
 </head>
 <header id="myheader">
-    <script src="header.js"></script>
+    <!-- <script src="header.js"></script> -->
 </header>
 <body>
-    <h1>Filmes em cartaz</h1>
+    <div id="header"></div>
+    <div class="inside">
+        <h1>Filmes em cartaz</h1>
 
-    <!--Galeria de imagens-->
-<!-- Slideshow container -->
-    <div class="slide-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">1 / 3</div> -->
-            <img src="/Assets/sm-poster.jpg" style="width:100%">
-            <div class="text">Homem-Aranha: Sem Volta pra Casa</div>
+        <!--Galeria de imagens-->
+    <!-- Slideshow container -->
+        <div class="slide-container">
+    
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides">
+                <img src="/Assets/sm-poster.jpg" style="width:100%; height:450px;">
+                <div class="text">Homem-Aranha: Sem Volta pra Casa</div>
+            </div>
+        
+            <div class="mySlides">
+                <!-- <div class="numbertext">2 / 3</div> -->
+                <img src="/Assets/mk-poster.png" style="width:100%; height: 450px;">
+                <div class="text">Mortal Kombat</div>
+            </div>
+        
+            <div class="mySlides">
+                <!-- <div class="numbertext">3 / 3</div> -->
+                <img src="/Assets/tb-poster.jpg" style="width:100%; height: 450px;">
+                <div class="text">The Batman</div>
+            </div>
+    
+            <div class="mySlides">
+                <!-- <div class="numbertext">3 / 3</div> -->
+                <img src="/Assets/Eternos-Marvel-1024x576.jpg" style="width:100%; height: 450px;">
+                <div class="text">Eternos</div>
+            </div>
+    
+            <div class="mySlides">
+                <!-- <div class="numbertext">3 / 3</div> -->
+                <img src="/Assets/uncharted.PNG" style="width:100%; height: 450px;">
+                <div class="text">Uncharted: Fora do Mapa</div>
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <script src="slideshow.js"></script>
+    
+        <div class="soon">
+            <h2>Em Breve</h2>
+            <div>
+                <a href="">
+                    <img src="/Assets/sing2-breve.jpg" height="200">
+                </a>
+                <a href="">
+                    <img src="/Assets/monica-breve.jpg" height="200">
+                </a>
+                <a href="">
+                    <img src="/Assets/kingsman-breve.jpg" height="200">
+                </a>
+                <a href="">
+                    <img src="/Assets/panico-breve.jpg" height="200">
+                </a>
+                
+                <a href="/filmes.html">
+                    <button id="seemore">Ver mais</button>
+                </a>
+        </div>
+        
         </div>
     
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">2 / 3</div> -->
-            <img src="/Assets/mk-poster.png" style="width:100%">
-            <div class="text">Mortal Kombat</div>
-        </div>
-    
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="/Assets/tb-poster.jpg" style="width:100%">
-            <div class="text">The Batman</div>
-        </div>
-
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="/Assets/Eternos-Marvel-1024x576.jpg" style="width:100%">
-            <div class="text">Eternos</div>
-        </div>
-
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="/Assets/uncharted.PNG" style="width:100%">
-            <div class="text">Uncharted: Fora do Mapa</div>
-        </div>
-    
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- <div>
+            <label>Qual a sua cidade?</label>
+            <select id="selctCidade">
+                <option value="1">Olinda - PE</option>
+                <option value="2">Recife - PE</option>
+                <option value="3">Paulista - PE</option>
+                <option value="4">Camaragibe - PE</option>
+                <option value="5">Fortaleza - CE</option>
+            </select>
+        </div> -->    
     </div>
-    <br>
-    
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-    <h2>Em Breve</h2>
-    <div>
-        <a href="">
-            <img src="/Assets/sing2-breve.jpg" height="200">
-        </a>
-        <a href="">
-            <img src="/Assets/monica-breve.jpg" height="200">
-        </a>
-        <a href="">
-            <img src="/Assets/kingsman-breve.jpg" height="200">
-        </a>
-        <a href="">
-            <img src="/Assets/panico-breve.jpg" height="200">
-        </a>
-    </div>
-
-    <!-- <div>
-        <label>Qual a sua cidade?</label>
-        <select id="selctCidade">
-            <option value="1">Olinda - PE</option>
-            <option value="2">Recife - PE</option>
-            <option value="3">Paulista - PE</option>
-            <option value="4">Camaragibe - PE</option>
-            <option value="5">Fortaleza - CE</option>
-        </select>
-    </div> -->
+    <div id="footer"></div>
 </body>
 
 <!--Footer-->
 <footer id="myfooter">
-    <script src="footer.js"></script>
-    <section style="margin: 20;">
-        <div>
-            <h3>INSTITUCIONAL</h3>
-             <!--Ver como tirar a bolinha da lista no CSS ou não usar lista-->
-             <ul>
-                <li>Sobre nós</li>
-                <li>Onde estamos</li>
-                <li>Anuncie</li>
-                <li>Produtos e Serviços</li>
-            </ul>
-        </div>
-        <div>
-            <h3>CONTATO</h3>
-            <p>Fale Conosco</p>
-            <p>Trabalhe Conosco</p>
-        </div>
-        <div>
-            <h3>LEGAL</h3>
-            <p>Termos e Condições</p>
-            <p>Troca e Cancelamento</p>
-            <p>Regulamento Santander</p>
-        </div>
-        <div>
-            <h3>REDES SOCIAIS</h3>
-            <i class="fa fa-facebook-square" style="font-size: xx-large;"></i>
-            <i class="fa fa-instagram" style="font-size: xx-large;"></i>
-            <i class="fa fa-twitter-square" style="font-size: xx-large;"></i>
-            <i class="fa fa-youtube" style="font-size: xx-large;"></i>
-            <i class="fa fa-linkedin-square" style="font-size: xx-large;"></i>
-        </div>
-    </section>
-    
-    <section>
-        <p class="end">Nilo Cinemas do Brasil 2021-2022 © Todos os Direitos Reservados</p>
-    </section>
-</footer>
+    <!-- <script src="footer.js"></script> -->
+</footer>    
 </html>
