@@ -4,38 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+          $("#header").load("header.html"); 
+          $("#footer").load("footer.html"); 
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/Assets/favico3.PNG">
+    <title>Cinemas</title>
 </head>
 <header id="myheader">
-    <script src="/header.js"></script>
+    <!-- <script src="/header.js"></script> -->
 </header>
 <body>
-    <h1>Cinemas</h1>
-    <div>
-        <label>Qual cinema você quer visualizar?</label>
-        <!-- <select id='selctCidade'>
-            <option value='1'>Olinda - PE</option>
-            <option value='3'>Paulista - PE</option>
-            <option value='4'>Camaragibe - PE</option>
-            <option value='5'>Fortaleza - CE</option>
-        </select> -->
-        <select id='selctCinema'>
-            <option value='1'>Todos</option>
-            <option value='2'>Shopping Patteo Olinda</option>
-            <option value='3'>Paulista Northway</option>
-            <option value='4'>Camará Shopping</option>
-            <option value='5'>RioMar Kennedy</option>
-        </select>
-    </div>
+    <div id="header"></div>
+    <div class="inside">
+    <h1>Nilo Cinemas</h1>
+    <section>
+        <div>
+            <label>Qual cinema você quer visualizar?</label>
+            <!-- <select id='selctCidade'>
+                <option value='1'>Olinda - PE</option>
+                <option value='3'>Paulista - PE</option>
+                <option value='4'>Camaragibe - PE</option>
+                <option value='5'>Fortaleza - CE</option>
+            </select> -->
+            <select id='selctCinema'>
+                <option value='1'>Todos</option>
+                <option value='2'>Shopping Patteo Olinda</option>
+                <option value='3'>Paulista Northway</option>
+                <option value='4'>Camará Shopping</option>
+                <option value='5'>RioMar Kennedy</option>
+            </select>
+            <aside style="padding-left: 5%; padding-bottom: 5%;">
+                <h3>Preços</h3>
+                <table>
+                    <tr>
+                        <th>Dias</th>
+                        <th>Salas 2D</th>
+                        <th>Salas 3D</th>
+                        <th>Salas VIP</th>
+                    </tr>
+                    <tr>
+                        <td>2ª a 4ª feira</td>
+                        <td>R$12,00</td>
+                        <td>R$19,00</td>
+                        <td>R$26,00</td>
+                    </tr>
+                    <tr>
+                        <td>5ª a Domingo</td>
+                        <td>R$16,50</td>
+                        <td>R$26,95</td>
+                        <td>R$35,00</td>
+                    </tr>
+                </table>
+            </aside>
+        </div>
+        <br>
+        <div>
+            <details>
+                <summary>Shopping Patteo Olinda</summary>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae odio provident delectus incidunt placeat voluptate, culpa cumque libero magni atque qui porro accusamus quo repellat sequi optio veritatis natus?</li>
+                    <li><span style="font-weight: bold;">Endereço: </span>Rua Carmelita Muniz de Araújo, R. Eduardo de Morais, 225 - Casa Caiada, Olinda - PE, 53130-150</li>
+                    <li style="font-weight: bold;">Mapa: </li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.211461167813!2d-34.8402871!3d-7.9934779!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9af8293ed7b76e28!2sShopping%20Patteo%20Olinda!5e0!3m2!1spt-BR!2sbr!4v1642605504644!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                    <li><span style="font-weight: bold;">Capacidade de Lotação: </span>1800</li>
+                    <li><span style="font-weight: bold;">Mais informações no site do: </span><a href="https://www.shoppingpatteoolinda.com.br/cinema.asp">Nilo Cinemas Shopping Patteo Olinda</a></li>
+                    <!--incorporar google maps aqui-->
+                    <!-- <aside>Teste</aside> -->
+                </ul>
+            </details>
 
-    <!--Tabela com todos os cinemas-->
+            <details>
+                <summary>Shopping RioMar Recife</summary>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae odio provident delectus incidunt placeat voluptate, culpa cumque libero magni atque qui porro accusamus quo repellat sequi optio veritatis natus?</li>
+                    <li><span style="font-weight: bold;">Endereço: </span>Rua Carmelita Muniz de Araújo, R. Eduardo de Morais, 225 - Casa Caiada, Olinda - PE, 53130-150</li>
+                    <li style="font-weight: bold;">Mapa: </li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.211461167813!2d-34.8402871!3d-7.9934779!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9af8293ed7b76e28!2sShopping%20Patteo%20Olinda!5e0!3m2!1spt-BR!2sbr!4v1642605504644!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                    <li><span style="font-weight: bold;">Capacidade de Lotação: </span>1800</li>
+                    <li><span style="font-weight: bold;">Mais informações no site do: </span><a href="https://www.shoppingpatteoolinda.com.br/cinema.asp">Nilo Cinemas Shopping Patteo Olinda</a></li>
+                    <!--incorporar google maps aqui-->
+                    <!-- <aside>Teste</aside> -->
+                </ul>
+            </details>
 
-    <!--Localização-->
-    <h2>Localização</h2>
-    <!--Integrar mapa do Google com localização-->
+            <details>
+                <summary>Shopping Recife</summary>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae odio provident delectus incidunt placeat voluptate, culpa cumque libero magni atque qui porro accusamus quo repellat sequi optio veritatis natus?</li>
+                    <li><span style="font-weight: bold;">Endereço: </span>Rua Carmelita Muniz de Araújo, R. Eduardo de Morais, 225 - Casa Caiada, Olinda - PE, 53130-150</li>
+                    <li style="font-weight: bold;">Mapa: </li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.211461167813!2d-34.8402871!3d-7.9934779!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9af8293ed7b76e28!2sShopping%20Patteo%20Olinda!5e0!3m2!1spt-BR!2sbr!4v1642605504644!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                    <li><span style="font-weight: bold;">Capacidade de Lotação: </span>1800</li>
+                    <li><span style="font-weight: bold;">Mais informações no site do: </span><a href="https://www.shoppingpatteoolinda.com.br/cinema.asp">Nilo Cinemas Shopping Patteo Olinda</a></li>
+                    <!--incorporar google maps aqui-->
+                    <!-- <aside>Teste</aside> -->
+                </ul>
+            </details>
+            <details>
+                <summary>Shopping Northway Paulista</summary>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae odio provident delectus incidunt placeat voluptate, culpa cumque libero magni atque qui porro accusamus quo repellat sequi optio veritatis natus?</li>
+                    <li><span style="font-weight: bold;">Endereço: </span>Rua Carmelita Muniz de Araújo, R. Eduardo de Morais, 225 - Casa Caiada, Olinda - PE, 53130-150</li>
+                    <li style="font-weight: bold;">Mapa: </li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.211461167813!2d-34.8402871!3d-7.9934779!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9af8293ed7b76e28!2sShopping%20Patteo%20Olinda!5e0!3m2!1spt-BR!2sbr!4v1642605504644!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                    <li><span style="font-weight: bold;">Capacidade de Lotação: </span>1800</li>
+                    <li><span style="font-weight: bold;">Mais informações no site do: </span><a href="https://www.shoppingpatteoolinda.com.br/cinema.asp">Nilo Cinemas Shopping Patteo Olinda</a></li>
+                    <!--incorporar google maps aqui-->
+                    <!-- <aside>Teste</aside> -->
+                </ul>
+            </details>
+           
+        </div>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis placeat aliquam at consequatur ducimus sed fugiat tempora natus quos, perspiciatis saepe hic inventore, excepturi sunt harum corporis eum fugit animi?</p> -->
+        <!--Tabela com todos os cinemas-->
+    </section>
+</div>
+    <br>
+    <div id="footer"></div>
 </body>
 <footer id="myfooter">
-    <script src="/footer.js"></script>
+    <!-- <script src="/footer.js"></script> -->
 </footer>
 </html>
 
