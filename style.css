@@ -1,25 +1,34 @@
 #socials{
-    float: right;
-    
+    float: right;   
     padding-right: 5px;
     color: rgb(139, 139, 139);
 }
-#socials a{
+#socials a, i{
     padding-top: 10px;
     padding-left: 2.5px;
     padding-right: 2.5px;
     font-size: x-large;
     text-align: center;
+    color: rgb(109, 109, 109);
 }
 #socials a:hover{
     color: rgb(233, 233, 233);
+    /* background-color: rgb(109, 109, 109); */
     cursor:pointer;
+}
+#socials a,i:visited{
+    text-decoration: none;
+}
+.borderr{
+    border-right: 3px;
+    border-left: 5px;
+    border-color: white;
 }
 .topnav{
     background-color: #333;
     height: 47.5px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
 }
 .topnav a{
     float: left;
@@ -33,11 +42,12 @@
     background-color: #ddd;
     color: black;
 }
-.topnav a.active {
+/* .topnav a.active {
     background-color: #04AA6D;
     color: white;
     border-top-left-radius: 15px;
-}
+} */
+/* .topnav.responsive {position: relative;} */
 #login, #cad{
     float: right;
     padding-right: 5px;
@@ -59,6 +69,26 @@ body h1{
 }
 body h2{
     padding: 0% 6% 0% 3%;
+}
+.textosobre{
+    margin: 0 0 0 8%;
+}
+.logintables table{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 70%;
+    border-collapse: collapse;
+    border: darkslategrey;
+}
+.logintables td{
+    border: 0px solid darkslategrey;
+    border-collapse: collapse;
+    border-style: none;
+}
+.logintables tr,th{
+    border: 0px solid darkslategrey;
+    border-style: none;
 }
 .soon{
     padding: 0% 0% 6% 6%;
@@ -131,19 +161,46 @@ body h2{
     font-size: 30px;
     padding: 22px 0px;
 }
+.poster{
+    height: 200px;
+}
+.textmovies {
+    font-family:'Courier New', Courier, monospace;
+    font-weight:normal;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f2f2f2;
+    font-size: 16px;
+    padding: 2px 0px 4px 0px;
+    position: absolute;
+    width: 137px;
+    text-align: center;
+    margin-top: -5px;
+    transition: font-size 0.6s ease;
+}
+.textmovies:hover{
+    font-size: 18px;
+}
 
 .inside{
-    background-color: darkblue;
+    padding-bottom: 30px;
+    background-color: rgb(36, 59, 59);
 }
 aside{
     float: right;
 }
-table, td, th, tr{
+#prices tr,td, table{
     border: 3px solid white;
     border-style: solid;
-    border-color: greenyellow;
-    border-top-color: green;
     border-collapse: collapse;
+    padding: 5px;
+}
+#prices tr:hover{
+    background-color:lightseagreen;
+    color: whitesmoke;
+    cursor: default;
+}
+details{
+    margin: 0% 2%;
 }
 details summary{
     font-size: x-large;
@@ -159,18 +216,48 @@ details ul, li{
     padding: 10;
     text-align:justify;
 }
+details ul{
+    /* background-color: rgb(26, 43, 43); */
+    border-radius: 15px;
+    padding: 2%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+}
 th{
     background-color: royalblue;
     color: whitesmoke;
 }
-tr:hover {
-    background-color: rgb(255, 204, 109);
-    color: whitesmoke;
-    cursor: default;
-}
+/* .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  } */
+
+  
 #footer{
-    padding: 15px;
-    background-color: rgb(230, 230, 109);
+    padding: 0px;
+    height:200px;
+    background-color: rgb(68, 68, 68);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
 }
 #footer ul{
     list-style-type: none;
@@ -178,20 +265,39 @@ tr:hover {
     padding: 0;
     text-align:justify;
 }
+#footer ul a:link{
+    font-style: normal;
+    text-decoration: none;
+    font-weight: bold;
+    color: cornsilk;
+}
+#footer ul a:visited{
+    color: rgb(255, 191, 72);
+}
 
 #footer section div.infos{
     /* background-color: lawngreen; */
     float:left;
     margin: 10px;
+    padding-left: 8%;
 }
 #footer section.end{
+    font-size: xx-small;
+    color: #000;
     float:bottom;
     position: static;
-    bottom: 10px;
-    padding-top: 100px;
+    bottom: 5px;
     margin-top: 0px;
 }
 #footer h3{
     font-size: large;
-    color:aquamarine;
+    color:orange;
+}
+@media screen and (max-width: 600px) {
+    #footer div:not(:first-child){display: none;}
+  .topnav a:not(:first-child) {display: none;}
+  /* .topnav a.icon {
+    float: right;
+    display: block;
+  } */
 }
